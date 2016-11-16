@@ -1,0 +1,24 @@
+# Site settings
+title: Open Coffee Club Tee
+email: kyle@drawattention.co
+description: > # this means to ignore newlines until "baseurl:"
+  You didn't ask for it, but now it's here - the very first Open Coffee Club shirt series. Show off your hunger for knowledge and thirst for coffee with our new line of tees.
+keywords: "open coffee club, coffee, shirts, shirt, tee, tees, club, tech, startups, startup, coworking, entrepreneur, community"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.opencoffeeclub.co" # the base hostname & protocol for your site
+permalink: /:categories/:title
+
+# Social accounts
+twitter_username: opencoffeetees
+github_username:  
+facebook_username:  drawattentionco
+
+# Build settings
+markdown: kramdown
+
+# Analytics
+google_analytics: "UA-56560915-4"
+add_this:
+
+# Commenting
+disqus_shortname:

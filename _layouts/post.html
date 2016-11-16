@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="page-section section">
+
+  <div class="container">
+    <header class="page-header">
+      <h2 class="section-heading text-center post-title">{{ page.title }}</h2>
+      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    </header>
+
+    <div class="post">
+      <article class="post-content">
+        {{ content }}
+      </article>
+    </div>
+
+  </div>
+
+</section>
+
+
+{% include comments.html %}

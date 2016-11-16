@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+#pixelate-image {
+  width: 100%;
+  position: relative;
+  bottom: 35%;
+}
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Theme colors
+$brand-primary: #66CC99;
+$brand-secondary: #FF6633;
+$brand-tertiary: #DBCDA2;
+$brand-accent: #FFF;
+$brand-dark: #2E4263;
+
+// Change preferred theme color here.
+$color: $brand-primary;
+$color-dark: darken($color, 5%);
+$color-darker: darken($color, 10%);
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+// @import "base", "layout";
+// @import "syntax-highlighting";
+
+// Specialty
+@import "mixins";
+@import "animate";
+
+// Theme
+@import "style";
+@import "color";
+
+
+// Tweaks for embedded content
+
+#ticket_information_wrapper {
+	height: 200px;
+}

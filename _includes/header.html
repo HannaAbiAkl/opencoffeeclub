@@ -1,0 +1,61 @@
+<header id="header" class="header-section section section-dark navbar navbar-fixed-top">
+
+  <div class="container-fluid">
+
+    <div class="navbar-header navbar-left">
+
+      <!-- RESPONSIVE MENU BUTTON -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- HEADER LOGO -->
+      <a class="navbar-logo navbar-brand" href="{{ site.baseurl }}/">
+        <!-- <img src="/images/logos/header-logo.png" srcset="/images/logos/header-logo@2x.png 2x" alt="{{ site.title }}"> -->
+        OpenCoffeeClub.
+      </a>
+
+    </div>
+
+    <nav id="navigation" class="navigation navbar-collapse collapse navbar-right">
+
+      <!-- NAVIGATION LINKS -->
+      <ul id="header-nav" class="nav navbar-nav">
+
+        <li><a href="#hero" class="hidden">Top</a></li>
+        {% if page.layout == 'index' %}
+          <li><a href="#about">About</a></li>
+          <li><a href="#design">Designs</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        {% else %}
+          <li><a href="{{ site.baseurl }}/" class="">Home</a></li>
+        {% endif %}
+        {% for page in site.pages %}
+          {% if page.title %}
+            <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+        <!-- DROPDOWN MENU -->
+        <!-- <li class="dropdown dropdown-hover">
+          <a href="#" class="dropdown-toggle external" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ site.baseurl }}/" class="">Home</a></li>
+            {% for page in site.pages %}
+              {% if page.title %}
+                <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </li> -->
+
+        <!-- HEADER ACTION BUTTON -->
+        <li class="header-action-button"><a href="/page/55b2fe13f6170203003be880" data-celery="55b2fe13f6170203003be880" data-celery-version="v2" class="btn btn-primary">Pre-Order Now</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
